@@ -76,7 +76,7 @@ FROM titles as t
               ON de.emp_no = t.emp_no
          join departments as d
               ON d.dept_no = de.dept_no
-where d.dept_no = 'd009' and de.to_date > NOW() && t.to_date > NOW()
+where d.dept_no = 'd009' and t.to_date = '9999-01-01'
 group by title;
 
 # Find the current salary of all current managers.
