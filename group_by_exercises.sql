@@ -35,4 +35,28 @@ from employees
 where (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya') and (gender = 'M' OR gender = 'F')
 group by gender;
 
-
+# CREATE TABLE authors(
+#     -> id INT NOT NULL AUTO_INCREMENT,
+#     -> first_name varchar(100) NOT NULL,
+#     -> PRIMARY KEY(id),
+#     -> UNIQUE (first_name)
+#     -> );
+#  Select * from authors;
+# Empty set (0.00 sec)
+#
+# mysql> describe authors;
+# +------------+--------------+------+-----+---------+----------------+
+# | Field      | Type         | Null | Key | Default | Extra          |
+# +------------+--------------+------+-----+---------+----------------+
+# | id         | int          | NO   | PRI | NULL    | auto_increment |
+# | first_name | varchar(100) | NO   | UNI | NULL    |                |
+# +------------+--------------+------+-----+---------+----------------+
+# insert into authors(first_name) values('rajib');
+# ERROR 1062 (23000): Duplicate entry 'rajib' for key 'authors.first_name'
+# mysql> select * from authors;
+# +----+------------+
+# | id | first_name |
+# +----+------------+
+# |  1 | rajib      |
+# +----+------------+
+# 1 row in set (0.01 sec)
